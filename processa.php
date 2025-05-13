@@ -18,4 +18,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: index.php");
     exit();
 }
+
+
+
+// Recuperar cookie
+
+// if(isset($_COOKIE["nome_visitante"])){
+
+// echo "Olá," . $_COOKIE["nome_visitante"] . "! Bem vindo de volta".";
+
+// }else {
+//    echo "olà, novo visitante!";
+// }
+
+// GET method usado
+
 ?>

@@ -1,4 +1,4 @@
-<?php
+<html>
 // Verifica se o cookie 'nome_visitante' existe
 $nomeVisitante = isset($_COOKIE['nome_visitante']) ? htmlspecialchars($_COOKIE['nome_visitante']) : null;
 ?>
@@ -9,6 +9,32 @@ $nomeVisitante = isset($_COOKIE['nome_visitante']) ? htmlspecialchars($_COOKIE['
     <meta charset="UTF-8">
     <title>Agente de Memória WEB - Desafio 1</title>
     <link rel="stylesheet" href="css/estilo.css">
+
+
+
+
+    <p id="mensagem"></p>
+
+<script>
+    fuction salvarcookie(){
+        const nome = document.getElementById('nome').value;
+        document.cookie = "nome=" + encodeURIComponent(nome) + "; max-age=86400";
+        mostrarMensagem();
+    }
+
+
+    function pegarcookie(){
+        const cookies = document.cookie.split('; ');
+        for (let c of cookies){
+            let [chave, valor] = c.split('=');
+            if(chave === nome) return decodeURIComponent(valor);             }
+            }
+            return null;
+
+</script>
+
+
+
 </head>
 <body>
 
